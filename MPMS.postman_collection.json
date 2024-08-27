@@ -1,0 +1,1717 @@
+{
+	"info": {
+		"_postman_id": "b5d4ee7c-669e-46fb-9814-f64c50769c05",
+		"name": "MPMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26644107"
+	},
+	"item": [
+		{
+			"name": "Delivery stage",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/deliverystage",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"deliverystage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Delivery stages",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"deliveryDate\": \"2024-03-14T08:55:44.850Z\",\r\n    \"stageOrder\": 1,\r\n    \"purchaseMaterials\": [\r\n      {\r\n        \"materialName\": \"string\",\r\n        \"supplierMaterialCode\": \"string\",\r\n        \"unit\": 20,\r\n        \"pricePerUnit\": 20,\r\n        \"totalQuantity\": 10,\r\n        \"rawMaterialId\": 2\r\n      },\r\n      {\r\n        \"materialName\": \"string\",\r\n        \"supplierMaterialCode\": \"string\",\r\n        \"unit\": 20,\r\n        \"pricePerUnit\": 20,\r\n        \"totalQuantity\": 10,\r\n        \"rawMaterialId\": 3\r\n      }\r\n    ]\r\n  },  \r\n  {\r\n    \"deliveryDate\": \"2024-03-14T08:55:44.850Z\",\r\n    \"stageOrder\": 2,\r\n    \"purchaseMaterials\": [\r\n      {\r\n        \"materialName\": \"string\",\r\n        \"supplierMaterialCode\": \"string\",\r\n        \"unit\": 20,\r\n        \"pricePerUnit\": 20,\r\n        \"totalQuantity\": 19,\r\n        \"rawMaterialId\": 2\r\n      }\r\n    ]\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/deliverystage/purchasing-order/1/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"deliverystage",
+								"purchasing-order",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/deliverystage/121",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"deliverystage",
+								"121"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by temp warehouse request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/deliverystage/temp-warehouse-request/61",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"deliverystage",
+								"temp-warehouse-request",
+								"61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by main warehouse request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/deliverystage/import-main-warehouse-request/61",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"deliverystage",
+								"import-main-warehouse-request",
+								"61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by inspection request Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/deliverystage/inspection-request/61",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"deliverystage",
+								"inspection-request",
+								"61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/deliverystage/41",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"deliverystage",
+								"41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Delivery stage of PO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": 61,\r\n        \"deliveryDate\": \"2024-03-14T08:55:44.85\",\r\n        \"stageOrder\": 1,\r\n        \"totalTypeMaterial\": 2,\r\n        \"totalPrice\": 0,\r\n        \"status\": null,\r\n        \"isSupplemental\": false,\r\n        \"purchaseMaterials\": [\r\n            {\r\n                \"id\": 61,\r\n                \"materialName\": \"string\",\r\n                \"supplierMaterialCode\": \"string\",\r\n                \"companyMaterialCode\": null,\r\n                \"unit\": 20,\r\n                \"unitPrice\": 0,\r\n                \"totalQuantity\": 30,\r\n                \"totalPrice\": 0,\r\n                \"tempImportDate\": null,\r\n                \"tempExportDate\": null,\r\n                \"mainImportDate\": null,\r\n                \"mainExportDate\": null,\r\n                \"planInspectDate\": null,\r\n                \"warehouseStatus\": null,\r\n                \"afterInspectQuantity\": null,\r\n                \"afterInspectPrice\": null\r\n            },\r\n            {\r\n                \"id\": 62,\r\n                \"materialName\": \"string\",\r\n                \"supplierMaterialCode\": \"string\",\r\n                \"companyMaterialCode\": null,\r\n                \"unit\": 20,\r\n                \"unitPrice\": 0,\r\n                \"totalQuantity\": 10,\r\n                \"totalPrice\": 0,\r\n                \"tempImportDate\": null,\r\n                \"tempExportDate\": null,\r\n                \"mainImportDate\": null,\r\n                \"mainExportDate\": null,\r\n                \"planInspectDate\": null,\r\n                \"warehouseStatus\": null,\r\n                \"afterInspectQuantity\": null,\r\n                \"afterInspectPrice\": null\r\n            }\r\n        ],\r\n        \"createdDate\": \"2024-03-15T21:56:15.9221473\",\r\n        \"createdBy\": null,\r\n        \"lastModifiedDate\": \"2024-03-15T21:56:15.9221486\",\r\n        \"lastModifiedBy\": null,\r\n        \"isDeleted\": false\r\n    },\r\n    {\r\n        \"id\": 62,\r\n        \"deliveryDate\": \"2024-03-14T08:55:44.85\",\r\n        \"stageOrder\": 1,\r\n        \"totalTypeMaterial\": 2,\r\n        \"totalPrice\": 0,\r\n        \"status\": null,\r\n        \"isSupplemental\": false,\r\n        \"purchaseMaterials\": [\r\n            {\r\n                \"id\": 63,\r\n                \"materialName\": \"string\",\r\n                \"supplierMaterialCode\": \"string\",\r\n                \"companyMaterialCode\": null,\r\n                \"unit\": 20,\r\n                \"unitPrice\": 0,\r\n                \"totalQuantity\": 30,\r\n                \"totalPrice\": 0,\r\n                \"tempImportDate\": null,\r\n                \"tempExportDate\": null,\r\n                \"mainImportDate\": null,\r\n                \"mainExportDate\": null,\r\n                \"planInspectDate\": null,\r\n                \"warehouseStatus\": null,\r\n                \"afterInspectQuantity\": null,\r\n                \"afterInspectPrice\": null\r\n            },\r\n            {\r\n                \"id\": 64,\r\n                \"materialName\": \"string\",\r\n                \"supplierMaterialCode\": \"string\",\r\n                \"companyMaterialCode\": null,\r\n                \"unit\": 20,\r\n                \"unitPrice\": 0,\r\n                \"totalQuantity\": 10,\r\n                \"totalPrice\": 0,\r\n                \"tempImportDate\": null,\r\n                \"tempExportDate\": null,\r\n                \"mainImportDate\": null,\r\n                \"mainExportDate\": null,\r\n                \"planInspectDate\": null,\r\n                \"warehouseStatus\": null,\r\n                \"afterInspectQuantity\": null,\r\n                \"afterInspectPrice\": null\r\n            }\r\n        ],\r\n        \"createdDate\": \"2024-03-15T21:56:15.9229652\",\r\n        \"createdBy\": null,\r\n        \"lastModifiedDate\": \"2024-03-15T21:56:15.9229654\",\r\n        \"lastModifiedBy\": null,\r\n        \"isDeleted\": false\r\n    },\r\n    {\r\n        \"id\": 63,\r\n        \"deliveryDate\": \"2024-03-14T08:55:44.85\",\r\n        \"stageOrder\": 1,\r\n        \"totalTypeMaterial\": 1,\r\n        \"totalPrice\": 0,\r\n        \"status\": null,\r\n        \"isSupplemental\": false,\r\n        \"purchaseMaterials\": [\r\n            {\r\n                \"id\": 65,\r\n                \"materialName\": \"string\",\r\n                \"supplierMaterialCode\": \"string\",\r\n                \"companyMaterialCode\": null,\r\n                \"unit\": 20,\r\n                \"unitPrice\": 0,\r\n                \"totalQuantity\": 10,\r\n                \"totalPrice\": 0,\r\n                \"tempImportDate\": null,\r\n                \"tempExportDate\": null,\r\n                \"mainImportDate\": null,\r\n                \"mainExportDate\": null,\r\n                \"planInspectDate\": null,\r\n                \"warehouseStatus\": null,\r\n                \"afterInspectQuantity\": null,\r\n                \"afterInspectPrice\": null\r\n            }\r\n        ],\r\n        \"createdDate\": \"2024-03-15T22:11:28.6621011\",\r\n        \"createdBy\": null,\r\n        \"lastModifiedDate\": \"2024-03-15T22:11:28.6621018\",\r\n        \"lastModifiedBy\": null,\r\n        \"isDeleted\": false\r\n    },\r\n    {\r\n        \"id\": 64,\r\n        \"deliveryDate\": \"2024-03-14T08:55:44.85\",\r\n        \"stageOrder\": 1,\r\n        \"totalTypeMaterial\": 1,\r\n        \"totalPrice\": 0,\r\n        \"status\": null,\r\n        \"isSupplemental\": false,\r\n        \"purchaseMaterials\": [\r\n            {\r\n                \"id\": 66,\r\n                \"materialName\": \"string\",\r\n                \"supplierMaterialCode\": \"string\",\r\n                \"companyMaterialCode\": null,\r\n                \"unit\": 20,\r\n                \"unitPrice\": 0,\r\n                \"totalQuantity\": 19,\r\n                \"totalPrice\": 0,\r\n                \"tempImportDate\": null,\r\n                \"tempExportDate\": null,\r\n                \"mainImportDate\": null,\r\n                \"mainExportDate\": null,\r\n                \"planInspectDate\": null,\r\n                \"warehouseStatus\": null,\r\n                \"afterInspectQuantity\": null,\r\n                \"afterInspectPrice\": null\r\n            }\r\n        ],\r\n        \"createdDate\": \"2024-03-15T22:11:28.6621071\",\r\n        \"createdBy\": null,\r\n        \"lastModifiedDate\": \"2024-03-15T22:11:28.6621072\",\r\n        \"lastModifiedBy\": null,\r\n        \"isDeleted\": false\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/deliverystage/purchasing-order/61",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"deliverystage",
+								"purchasing-order",
+								"61"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MaterialCategory",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/materialcategory/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"materialcategory",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/materialcategory/2",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"materialcategory",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Hóa chất\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/materialcategory/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"materialcategory",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"new cate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/materialcategory",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"materialcategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/materialcategory/2",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"materialcategory",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order Material",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/OrderMaterial",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"OrderMaterial"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/OrderMaterial/41",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"OrderMaterial",
+								"41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/OrderMaterial/41",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"OrderMaterial",
+								"41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all by PO id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/OrderMaterial/purchasingorder/61",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"OrderMaterial",
+								"purchasingorder",
+								"61"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PO_Report",
+			"item": [
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/po_report/41",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"po_report",
+								"41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/po_report/41",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"po_report",
+								"41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/po_report/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"po_report",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all by PO Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/po_report/purchasingorder/41",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"po_report",
+								"purchasingorder",
+								"41"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Production Plan",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/productionplan/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"productionplan",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/productionplan/1",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"productionplan",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic3RyaW5nIiwiVXNlcklkIjoiNjQiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIyIiwiZXhwIjoxNzEwOTE3MTAyLCJpc3MiOiJNUE1TQXV0aGVudGljYXRvciIsImF1ZCI6Ik1QTVNQb3N0bWFuQ2xpZW50In0.FCMMlLFpvLypanJy-4rvp1HanGtODkGI3ANzO7mhEVo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"string\",\r\n  \"planStartDate\": \"2024-06-15T11:32:35.692Z\",\r\n  \"planEndDate\": \"2024-06-16T11:32:35.692Z\",\r\n  \"note\": \"string\",\r\n  \"fileUrl\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/productionplan/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"productionplan",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"1\",\r\n  \"note\": \"string\",\r\n  \"fileUrl\": \"string\"\r\n  //\"managerId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/productionplan",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"productionplan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/productionplan/2",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"productionplan",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purchase Material",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/purchasematerial",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"purchasematerial"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purchasing Order",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/purchasingorder/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"purchasingorder",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/purchasingorder/1",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"purchasingorder",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"PO for Purchasing plan 2/2025\",\r\n  \"poCode\": \"PO-4-2\",\r\n  \"supplierName\": \"Supplier 1\",\r\n  \"supplierCompanyName\": \"Supplier 1\",\r\n  \"supplierTaxCode\": \"123456\",\r\n  \"supplierAddress\": \"Viet Nam\",\r\n  \"suppplierEmail\": \"supplier@mail.com\",\r\n  \"supplierPhone\": \"0987654321\",\r\n  \"receiverCompanyPhone\": \"0987654321\",\r\n  \"receiverCompanyEmail\": \"Receiver\",\r\n  \"receiverCompanyAddress\": \"Viet Nam\",\r\n  \"note\": \"N/A\",\r\n  \"purchasingPlanId\": 4,\r\n  \"orderMaterials\": [\r\n    {\r\n      \"materialName\": \"Material 1\",\r\n      \"quantity\": 350,\r\n      \"unitPrice\": 150,\r\n      \"materialTotalPrice\": 0,\r\n      \"rawMaterialId\": 4\r\n    },\r\n    {\r\n      \"materialName\": \"Material 2\",\r\n      \"quantity\": 500,\r\n      \"unitPrice\": 300,\r\n      \"materialTotalPrice\": 0,\r\n      \"rawMaterialId\": 2\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/purchasingorder/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"purchasingorder",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/purchasingorder/1",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"purchasingorder",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/purchasingorder/61/approval/1?isSupplier=true",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"purchasingorder",
+								"61",
+								"approval",
+								"1"
+							],
+							"query": [
+								{
+									"key": "isSupplier",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 65,\r\n    \"name\": \"21\",\r\n    \"poCode\": \"321\",\r\n    \"supplierName\": \"32\",\r\n    \"supplierCompanyName\": \"321\",\r\n    \"supplierTaxCode\": \"321\",\r\n    \"supplierAddress\": \"321\",\r\n    \"suppplierEmail\": \"321@gmail.com\",\r\n    \"supplierPhone\": \"21\",\r\n    \"receiverCompanyAddress\": \"32\",\r\n    \"receiverCompanyEmail\": \"321@gmail.com\",\r\n    \"receiverCompanyPhone\": \"32\",\r\n    \"note\": \"23\",\r\n    \"orderMaterials\": [\r\n        {\r\n            \"id\": 64,\r\n            \"rawMaterialId\": 4,\r\n            \"materialName\": \"Vải PVC màu đen\",\r\n            \"quantity\": 1,\r\n            \"unitPrice\": 32\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/purchasingorder",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"purchasingorder"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purchasing Plan",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/purchasingplan/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"purchasingplan",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/purchasingplan/5",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"purchasingplan",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Purchasing Plan for Production plan 1/2025\",\r\n  \"startDate\": \"2024-03-25T11:26:41.947Z\",\r\n  \"endDate\": \"2024-04-29T11:26:41.947Z\",\r\n  \"note\": \"N/A\",\r\n  \"productionPlanId\": 25,\r\n  \"purchasetasks\": [\r\n    {\r\n      \"quantity\": 200,\r\n      \"rawMaterialId\": 1\r\n    },\r\n    {\r\n      \"quantity\": 500,\r\n      \"rawMaterialId\": 2\r\n    },\r\n    {\r\n      \"quantity\": 350,\r\n      \"rawMaterialId\": 4\r\n    }\r\n  ]  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/purchasingplan/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"purchasingplan",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/purchasingplan/1",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"purchasingplan",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/purchasingplan/4/approval/1",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"purchasingplan",
+								"4",
+								"approval",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"string\",\r\n    \"startDate\": \"2024-03-13T13:34:56.239Z\",\r\n    \"endDate\": \"2024-03-13T13:34:56.239Z\",\r\n    \"note\": \"string\",\r\n    \"purchaseTasks\": [\r\n        {\r\n            \"id\": 1,\r\n            \"quantity\": 20,\r\n            \"assignDate\": \"2024-03-13T13:34:56.239Z\",\r\n            \"finishedDate\": \"2024-03-13T13:34:56.239Z\"\r\n            //\"purchasingStaffId\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/purchasingplan",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"purchasingplan"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purchasing Task",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/PurchasingTask/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"PurchasingTask",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/PurchasingTask/5",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"PurchasingTask",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/PurchasingTask/1",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"PurchasingTask",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Raw Material",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/rawmaterial/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"rawmaterial",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/rawmaterial/2",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"rawmaterial",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"string\",\r\n  \"code\": \"string\",\r\n  \"color\": 0,\r\n  \"size\": 0,\r\n  \"weight\": 0,\r\n  \"shape\": 0,\r\n  \"unit\": 0,\r\n  \"imageUrl\": \"string\",\r\n  \"description\": \"string\",\r\n  \"storageGuide\": \"string\",\r\n  \"estimatePrice\": 2000,\r\n  \"materialCategoryId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/rawmaterial/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"rawmaterial",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"new cate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/rawmaterial",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"rawmaterial"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/rawmaterial/2",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"rawmaterial",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supplier Account Request",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/supplieraccountrequest/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"supplieraccountrequest",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/supplieraccountrequest/5",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"supplieraccountrequest",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"supplier1\",\r\n  \"hashedPassword\": \"1\",\r\n  \"fullName\": \"Supplier\",\r\n  \"address\": \"string\",\r\n  \"phoneNumber\": \"string\",\r\n  \"dob\": \"2024-03-13T16:40:12.504Z\",\r\n  \"profilePictureUrl\": \"string\",\r\n  \"companyName\": \"string\",\r\n  \"companyEmail\": \"string\",\r\n  \"companyAddress\": \"string\",\r\n  \"companyPhone\": \"string\",\r\n  \"companyTaxCode\": \"string\",\r\n  \"requestStaffId\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/supplieraccountrequest/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"supplieraccountrequest",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/supplieraccountrequest/5",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"supplieraccountrequest",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/SupplierAccountRequest/approve/1/1",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"SupplierAccountRequest",
+								"approve",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"string\",\r\n    \"startDate\": \"2024-03-13T13:34:56.239Z\",\r\n    \"endDate\": \"2024-03-13T13:34:56.239Z\",\r\n    \"note\": \"string\",\r\n    \"purchaseTasks\": [\r\n        {\r\n            \"id\": 1,\r\n            \"quantity\": 20,\r\n            \"assignDate\": \"2024-03-13T13:34:56.239Z\",\r\n            \"finishedDate\": \"2024-03-13T13:34:56.239Z\"\r\n            //\"purchasingStaffId\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/purchasingplan",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"purchasingplan"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/user",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/user/2",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"string\",\r\n  \"hashedPassword\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/user/login",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"staffCode\": \"I001\",\r\n    \"email\": \"inspector@mail.com\",\r\n    \"hashedPassword\": \"1\",\r\n    \"fullName\": \"string\",\r\n    \"address\": \"string\",\r\n    \"phoneNumber\": \"string\",\r\n    \"dob\": \"2024-03-11T04:15:15.256Z\",\r\n    \"profilePictureUrl\": \"string\",\r\n    \"roleId\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/user/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create supplier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"supplier@mail.com\",\r\n  \"hashedPassword\": \"1\",\r\n  \"fullName\": \"string\",\r\n  \"address\": \"string\",\r\n  \"phoneNumber\": \"string\",\r\n  \"dob\": \"2024-03-21T02:13:55.165Z\",\r\n  \"profilePictureUrl\": \"string\",\r\n  \"supplier\": {\r\n    \"companyName\": \"string\",\r\n    \"companyEmail\": \"string\",\r\n    \"companyAddress\": \"string\",\r\n    \"companyPhone\": \"string\",\r\n    \"companyTaxCode\": \"string\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/user/supplier",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"supplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"staffCode\": \"test\",\r\n    \"email\": \"string\",\r\n    \"fullName\": \"string\",\r\n    \"address\": \"string\",\r\n    \"phoneNumber\": \"string\",\r\n    \"dob\": \"2024-03-11T04:15:43.039\",\r\n    \"profilePictureUrl\": \"string\",\r\n    \"roleId\": null,\r\n    \"accountStatus\": 0,\r\n    \"inspector\": null,\r\n    \"manager\": null,\r\n    \"purchasingManager\": null,\r\n    \"purchasingStaff\": null,\r\n    \"supplier\": {\r\n        \"id\": 2,\r\n        \"companyName\": \"test\",\r\n        \"companyEmail\": \"string\",\r\n        \"companyAddress\": \"string\",\r\n        \"companyPhone\": \"string\",\r\n        \"companyTaxCode\": \"string\",\r\n        \"createdDate\": \"2024-03-11T11:16:08.2662916\",\r\n        \"createdBy\": null,\r\n        \"lastModifiedDate\": \"2024-03-11T11:16:08.266294\",\r\n        \"lastModifiedBy\": null,\r\n        \"isDeleted\": false\r\n    },\r\n    \"warehouseStaff\": null,\r\n    \"createdDate\": \"2024-03-11T11:16:08.2662961\",\r\n    \"createdBy\": null,\r\n    \"lastModifiedDate\": \"2024-03-11T11:16:08.2662962\",\r\n    \"lastModifiedBy\": null,\r\n    \"isDeleted\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/user",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Warehouse",
+			"item": []
+		},
+		{
+			"name": "Warehouse Material",
+			"item": []
+		},
+		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "Get by user id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/notification/user/41/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"notification",
+								"user",
+								"41",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/notification/61",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"notification",
+								"61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read noti",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/notification/read/61/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"notification",
+								"read",
+								"61",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Test\",\r\n  \"content\": \"test 2\",\r\n  \"action\": 0,\r\n  \"type\": 0,\r\n  \"status\": 0,\r\n  \"userId\": 41,\r\n  \"purchasingOrderId\": 41\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/notification/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"notification",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Temp warehouse request",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"requestDate\": \"2024-03-21T06:08:28.485Z\",\r\n  \"requestTitle\": \"string\",\r\n  \"requestReasonContent\": \"string\",\r\n  \"requestType\": 0,\r\n  \"requestExecutionDate\": \"2024-03-21T06:08:28.485Z\",\r\n  \"deliveryStageId\": 121\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/tempwarehouserequest",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"tempwarehouserequest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/tempwarehouserequest",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"tempwarehouserequest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/tempwarehouserequest/61",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"tempwarehouserequest",
+								"61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all by delivery stage id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/tempwarehouserequest/deliverystage/121",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"tempwarehouserequest",
+								"deliverystage",
+								"121"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 61,\r\n  \"approveStatus\": 1,\r\n  \"approveDate\": \"2024-03-21T06:33:42.044Z\",\r\n  \"requestExecutionDate\": \"2024-03-21T06:33:42.044Z\",\r\n  \"approveExecutionDate\": \"2024-03-21T06:33:42.044Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/tempwarehouserequest/approval",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"tempwarehouserequest",
+								"approval"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Warehouse Form",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/WarehouseForm/61",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"WarehouseForm",
+								"61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"formCode\": \"string\",\r\n  \"formType\": 0,\r\n  \"poCode\": \"string\",\r\n  \"receiveCompanyName\": \"string\",\r\n  \"companyAddress\": \"string\",\r\n  \"receiveWarehouse\": 0,\r\n  \"formReason\": \"string\",\r\n  \"totalPrice\": 0,\r\n  \"totalPriceByWord\": \"string\",\r\n  \"certificationCode\": \"string\",\r\n  \"formCreatorName\": \"string\",\r\n  \"materialReceiver\": \"string\",\r\n  \"managerName\": \"string\",\r\n  \"tempWarehouseRequestId\": 61,\r\n  \"importMainWarehouseRequestId\": null,\r\n  \"warehouseFormMaterials\": [\r\n    {\r\n      \"materialName\": \"string\",\r\n      \"materialCode\": \"string\",\r\n      \"requestQuantity\": 10,\r\n      \"receiveQuantity\": 10,\r\n      \"unitPrice\": 0,\r\n      \"purchaseMaterialId\": 61\r\n    },\r\n    {\r\n      \"materialName\": \"string\",\r\n      \"materialCode\": \"string\",\r\n      \"requestQuantity\": 10,\r\n      \"receiveQuantity\": 8,\r\n      \"unitPrice\": 5,\r\n      \"purchaseMaterialId\": 62\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/WarehouseForm",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"WarehouseForm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 61,\r\n    \"formCode\": \"string\",\r\n    \"formType\": 0,\r\n    \"poCode\": \"string\",\r\n    \"receiveCompanyName\": \"string\",\r\n    \"companyAddress\": \"string\",\r\n    \"receiveWarehouse\": 0,\r\n    \"formReason\": \"string\",\r\n    \"totalPrice\": 0,\r\n    \"totalPriceByWord\": \"string\",\r\n    \"certificationCode\": \"string\",\r\n    \"formCreatorName\": \"string\",\r\n    \"materialReceiver\": \"string\",\r\n    \"managerName\": \"string\",\r\n    \"tempWarehouseRequestId\": 61,\r\n    \"importMainWarehouseRequestId\": null,\r\n    \"warehouseFormMaterials\": [\r\n        {\r\n            \"id\": 61,\r\n            \"materialName\": \"string\",\r\n            \"materialCode\": \"string\",\r\n            \"requestQuantity\": 10,\r\n            \"receiveQuantity\": 10,\r\n            \"unitPrice\": 0,\r\n            \"purchaseMaterialId\": 61\r\n        },\r\n        {\r\n            \"id\": 62,\r\n            \"materialName\": \"string\",\r\n            \"materialCode\": \"string\",\r\n            \"requestQuantity\": 10,\r\n            \"receiveQuantity\": 8,\r\n            \"unitPrice\": 5,\r\n            \"purchaseMaterialId\": 62\r\n        },\r\n        {\r\n            \"id\": 63,\r\n            \"materialName\": \"string\",\r\n            \"materialCode\": \"string\",\r\n            \"requestQuantity\": 10,\r\n            \"receiveQuantity\": 8,\r\n            \"unitPrice\": 5,\r\n            \"purchaseMaterialId\": 63\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/WarehouseForm",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"WarehouseForm"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
